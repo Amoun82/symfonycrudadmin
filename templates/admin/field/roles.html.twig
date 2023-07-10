@@ -1,0 +1,16 @@
+{% block _User_roles %}
+
+	{# nom du block : _NonDeEntity_NomDelaPropriété #}
+
+	{# le dump vide permet de voir toutes les variable disponiblee sur le template #}
+	{# {{ dump() }} #}
+
+		{% for role in field.value %}
+			{% if role == 'ROLE_USER' %}
+			Membre
+		{% elseif role == 'ROLE_ADMIN' %}
+			Administrateur
+		{% endif %}
+		<br>
+	{% endfor %}
+{% endblock %}
